@@ -1,0 +1,89 @@
+/* 附件名称显示优化样式 */
+/* 用于解决附件名称过长跑出网页界面的问题 */
+
+/* Element Plus上传组件文件名显示 */
+.el-upload-list__item-file-name {
+  word-break: break-all;
+  white-space: normal;
+  line-height: 1.4;
+  max-width: 100%;
+  display: inline-block;
+  overflow-wrap: break-word;
+  padding-right: 20px; /* 为操作按钮留出空间 */
+}
+.el-upload-list__item-name {
+  min-width: 0;
+  max-width: 200px;
+  display: inline-block;
+}
+.el-upload-list {
+  max-width: 100%;
+}
+.el-upload-list__item-info {
+  min-width: 0;
+  max-width: 200px;
+}
+
+/* Element Plus链接组件内层span */
+.el-link__inner {
+  word-break: break-all;
+  white-space: normal;
+  line-height: 1.4;
+  max-width: 100%;
+  display: inline-block;
+  overflow-wrap: break-word;
+}
+
+.attachment-name {
+  word-break: break-all;
+  white-space: normal;
+  line-height: 1.4;
+  max-width: 100%;
+  display: inline-block;
+  overflow-wrap: break-word;
+}
+
+.attachment-name-compact {
+  word-break: break-all;
+  white-space: normal;
+  line-height: 1.3;
+  max-width: 200px;
+  display: inline-block;
+  overflow-wrap: break-word;
+}
+
+.attachment-link {
+  word-break: break-all;
+  white-space: normal;
+  line-height: 1.4;
+  display: inline-block;
+  overflow-wrap: break-word;
+  flex: 1;
+  min-width: 0;
+}
+
+/* 表格中的附件名称 */
+.el-table .cell .attachment-link {
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* 弹窗中的附件名称 */
+.el-dialog .attachment-name-compact {
+  max-width: 250px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .attachment-name-compact {
+    max-width: 150px;
+  }
+  
+  .el-table .cell .attachment-link {
+    max-width: 100px;
+  }
+}

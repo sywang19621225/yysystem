@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+yysystem-web/node_modules/
+yysystem-mini/node_modules/
+
+# Build outputs
+dist/
+build/
+target/
+*.jar
+*.war
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Database
+*.sql
+!schema.sql
+!init.sql
+
+# Uploads
+uploads/
+
+# Temp files
+*.tmp
+*.temp
+~$*
+~/
+
+# Trae
+.trae/

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yysystem.modules.scm.stock.mapper.ScmStockMapper">
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.yysystem.modules.scm.stock.entity.ScmStock">
+        <id column="id" property="id" />
+        <result column="product_code" property="productCode" />
+        <result column="warehouse_id" property="warehouseId" />
+        <result column="stock_quantity" property="stockQuantity" />
+        <result column="available_stock" property="availableStock" />
+        <result column="total_stock" property="totalStock" />
+        <result column="cost_price" property="costPrice" />
+        <result column="unit" property="unit" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, product_code, warehouse_id, stock_quantity, available_stock, total_stock, cost_price, product_unit as unit, create_time as update_time
+    </sql>
+
+    <!-- 查询库存信息 -->
+    <select id="getStock" resultMap="BaseResultMap">
+        select id, product_code, warehouse_id, stock_quantity, available_stock, total_stock, cost_price, product_unit as unit, create_time as update_time
+        from pdm_product
+        where product_code = #{productCode}
+        limit 1
+    </select>
+
+    <!-- 更新库存 -->
+    <update id="updateStock">
+        update pdm_product
+        set stock_quantity = stock_quantity + #{quantity},
+            available_stock = available_stock + #{quantity},
+            total_stock = total_stock + #{quantity}
+        where product_code = #{productCode}
+        and warehouse_id = #{warehouseId}
+    </update>
+
+    <!-- 插入库存记录 - 商品表已存在，此操作实际为更新 -->
+    <insert id="insertStock" useGeneratedKeys="true" keyProperty="id">
+        <!-- 商品表已存在，不需要插入，由updateStock处理 -->
+    </insert>
+
+    <!-- 批量更新库存 -->
+    <update id="batchUpdateStock">
+        <foreach collection="list" item="item" index="index" separator=";">
+            update pdm_product
+            set stock_quantity = stock_quantity + #{item.quantity},
+                available_stock = available_stock + #{item.quantity},
+                total_stock = total_stock + #{item.quantity}
+            where product_code = #{item.productCode}
+            and warehouse_id = #{item.warehouseId}
+        </foreach>
+    </update>
+
+    <!-- 根据商品编码查询库存 -->
+    <select id="getStockByProductCode" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List" />
+        from pdm_product
+        where product_code = #{productCode}
+    </select>
+</mapper>

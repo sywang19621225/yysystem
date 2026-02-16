@@ -1,0 +1,284 @@
+/* Element Plus 自定义主题 - Indigo 配色方案 */
+/* 主色调: #6366F1 (Indigo) */
+/* 强调色: #10B981 (Emerald) */
+
+:root {
+  /* 主色调 */
+  --el-color-primary: #6366F1 !important;
+  --el-color-primary-light-3: #818CF8 !important;
+  --el-color-primary-light-5: #A5B4FC !important;
+  --el-color-primary-light-7: #C7D2FE !important;
+  --el-color-primary-light-8: #E0E7FF !important;
+  --el-color-primary-light-9: #EEF2FF !important;
+  --el-color-primary-dark-2: #4F46E5 !important;
+
+  /* 成功色 - Emerald */
+  --el-color-success: #10B981 !important;
+  --el-color-success-light-3: #34D399 !important;
+  --el-color-success-light-5: #6EE7B7 !important;
+  --el-color-success-light-7: #A7F3D0 !important;
+  --el-color-success-light-8: #D1FAE5 !important;
+  --el-color-success-light-9: #ECFDF5 !important;
+  --el-color-success-dark-2: #059669 !important;
+
+  /* 警告色 */
+  --el-color-warning: #F59E0B !important;
+  --el-color-warning-light-3: #FBBF24 !important;
+  --el-color-warning-light-5: #FCD34D !important;
+  --el-color-warning-light-7: #FDE68A !important;
+  --el-color-warning-light-8: #FEF3C7 !important;
+  --el-color-warning-light-9: #FFFBEB !important;
+  --el-color-warning-dark-2: #D97706 !important;
+
+  /* 危险色 */
+  --el-color-danger: #EF4444 !important;
+  --el-color-danger-light-3: #F87171 !important;
+  --el-color-danger-light-5: #FCA5A5 !important;
+  --el-color-danger-light-7: #FECACA !important;
+  --el-color-danger-light-8: #FEE2E2 !important;
+  --el-color-danger-light-9: #FEF2F2 !important;
+  --el-color-danger-dark-2: #DC2626 !important;
+
+  /* 信息色 */
+  --el-color-info: #6B7280 !important;
+  --el-color-info-light-3: #9CA3AF !important;
+  --el-color-info-light-5: #D1D5DB !important;
+  --el-color-info-light-7: #E5E7EB !important;
+  --el-color-info-light-8: #F3F4F6 !important;
+  --el-color-info-light-9: #F9FAFB !important;
+  --el-color-info-dark-2: #4B5563 !important;
+
+  /* 文字颜色 */
+  --el-text-color-primary: #1E1B4B !important;
+  --el-text-color-regular: #374151 !important;
+  --el-text-color-secondary: #6B7280 !important;
+  --el-text-color-placeholder: #9CA3AF !important;
+  --el-text-color-disabled: #D1D5DB !important;
+
+  /* 背景颜色 */
+  --el-bg-color: #F5F3FF !important;
+  --el-bg-color-page: #F5F3FF !important;
+  --el-bg-color-overlay: #FFFFFF !important;
+
+  /* 边框颜色 */
+  --el-border-color: #E5E7EB !important;
+  --el-border-color-light: #F3F4F6 !important;
+  --el-border-color-lighter: #F9FAFB !important;
+  --el-border-color-extra-light: #FAFAFA !important;
+  --el-border-color-dark: #D1D5DB !important;
+  --el-border-color-darker: #9CA3AF !important;
+
+  /* 填充颜色 */
+  --el-fill-color: #F9FAFB !important;
+  --el-fill-color-light: #F3F4F6 !important;
+  --el-fill-color-lighter: #E5E7EB !important;
+  --el-fill-color-extra-light: #F5F3FF !important;
+  --el-fill-color-dark: #E5E7EB !important;
+  --el-fill-color-darker: #D1D5DB !important;
+  --el-fill-color-blank: #FFFFFF !important;
+
+  /* 边框圆角 */
+  --el-border-radius-base: 8px !important;
+  --el-border-radius-small: 4px !important;
+  --el-border-radius-round: 20px !important;
+  --el-border-radius-circle: 100% !important;
+
+  /* 字体 */
+  --el-font-family: 'Fira Sans', 'Inter', system-ui, -apple-system, sans-serif !important;
+  --el-font-family-code: 'Fira Code', 'Monaco', 'Consolas', monospace !important;
+
+  /* 阴影 */
+  --el-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  --el-box-shadow-light: 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+  --el-box-shadow-lighter: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+  --el-box-shadow-dark: 0 10px 15px rgba(0, 0, 0, 0.1) !important;
+
+  /* 过渡 */
+  --el-transition-duration: 0.2s !important;
+  --el-transition-duration-fast: 0.15s !important;
+}
+
+/* 按钮样式优化 */
+.el-button {
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+}
+
+.el-button:hover {
+  transform: translateY(-1px) !important;
+}
+
+.el-button:active {
+  transform: translateY(0) !important;
+}
+
+/* 卡片样式优化 */
+.el-card {
+  border-radius: 12px !important;
+  transition: all 0.2s ease !important;
+}
+
+.el-card:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* 输入框样式优化 */
+.el-input__wrapper {
+  border-radius: 8px !important;
+  transition: all 0.2s ease !important;
+}
+
+.el-input__wrapper:focus-within {
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2) !important;
+}
+
+/* 表格样式优化 */
+.el-table {
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.el-table th {
+  background-color: #F5F3FF !important;
+  font-weight: 600 !important;
+  color: #1E1B4B !important;
+}
+
+/* 菜单样式优化 */
+.el-menu {
+  border-right: none !important;
+}
+
+.el-menu-item.is-active {
+  background-color: #EEF2FF !important;
+  color: #6366F1 !important;
+  border-right: 3px solid #6366F1 !important;
+}
+
+.el-menu-item:hover {
+  background-color: #F5F3FF !important;
+}
+
+/* 标签样式优化 */
+.el-tag {
+  border-radius: 6px !important;
+  font-weight: 500 !important;
+}
+
+/* 分页样式优化 */
+.el-pagination .el-pager li.active {
+  background-color: #6366F1 !important;
+  color: white !important;
+}
+
+/* 对话框样式优化 */
+.el-dialog {
+  border-radius: 16px !important;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* 下拉菜单样式优化 */
+.el-dropdown-menu {
+  border-radius: 8px !important;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* 消息提示样式优化 */
+.el-message {
+  border-radius: 8px !important;
+}
+
+/* 通知样式优化 */
+.el-notification {
+  border-radius: 12px !important;
+}
+
+/* 日期选择器样式优化 */
+.el-date-picker {
+  border-radius: 12px !important;
+}
+
+/* 选择器样式优化 */
+.el-select-dropdown {
+  border-radius: 8px !important;
+}
+
+/* 表单样式优化 */
+.el-form-item__label {
+  font-weight: 500 !important;
+  color: #374151 !important;
+}
+
+/* 树形控件样式优化 */
+.el-tree-node__content:hover {
+  background-color: #F5F3FF !important;
+}
+
+.el-tree-node:focus > .el-tree-node__content {
+  background-color: #EEF2FF !important;
+  color: #6366F1 !important;
+}
+
+/* 步骤条样式优化 */
+.el-step__head.is-success {
+  color: #10B981 !important;
+  border-color: #10B981 !important;
+}
+
+.el-step__title.is-success {
+  color: #10B981 !important;
+}
+
+/* 进度条样式优化 */
+.el-progress-bar__inner {
+  background-color: #6366F1 !important;
+}
+
+/* 滑块样式优化 */
+.el-slider__bar {
+  background-color: #6366F1 !important;
+}
+
+.el-slider__button {
+  border-color: #6366F1 !important;
+}
+
+/* 开关样式优化 */
+.el-switch.is-checked .el-switch__core {
+  background-color: #6366F1 !important;
+  border-color: #6366F1 !important;
+}
+
+/* 单选框样式优化 */
+.el-radio__input.is-checked .el-radio__inner {
+  background-color: #6366F1 !important;
+  border-color: #6366F1 !important;
+}
+
+/* 复选框样式优化 */
+.el-checkbox__input.is-checked .el-checkbox__inner {
+  background-color: #6366F1 !important;
+  border-color: #6366F1 !important;
+}
+
+/* 时间线样式优化 */
+.el-timeline-item__node {
+  background-color: #6366F1 !important;
+}
+
+/* 徽章样式优化 */
+.el-badge__content {
+  background-color: #EF4444 !important;
+}
+
+/* 回到顶部样式优化 */
+.el-backtop {
+  background-color: #6366F1 !important;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4) !important;
+}
+
+/* 加载样式优化 */
+.el-loading-spinner .path {
+  stroke: #6366F1 !important;
+}
